@@ -1,0 +1,34 @@
+{
+  "name": "quest-platform",
+  "version": "1.0.0",
+  "description": "A quest platform with payments, authentication, and admin panel",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "npm run dev --prefix backend & npm run dev --prefix frontend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend",
+    "db:migrate": "npm run db:migrate --prefix backend",
+    "db:seed": "npm run db:seed --prefix backend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend && npm run admin --prefix frontend",
+    "clean": "rm -rf node_modules frontend/node_modules backend/node_modules dist",
+    "security-check": "cd backend && npm audit",
+    "lint": "echo 'Configure ESLint for security linting'",
+    "test": "echo 'Run security tests manually as per SECURITY_TESTING.md'",
+    "help": "npm run --list"
+  },
+  "keywords": [
+    "quest",
+    "quiz",
+    "payment",
+    "razorpay",
+    "admin-panel"
+  ],
+  "author": "Quest Platform Team",
+  "license": "MIT"
+}
